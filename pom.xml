@@ -2,16 +2,17 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>dice</groupId>
+  <groupId>net.sf.javaml</groupId>
   <artifactId>java-ml</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1.7-DICE-1</version>
   <packaging>jar</packaging>
 
   <name>java-ml</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/dice-group/java-ml</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
   </properties>
 
   <dependencies>
@@ -22,4 +23,18 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+  </build>
 </project>
